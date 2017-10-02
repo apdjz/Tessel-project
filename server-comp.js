@@ -39,16 +39,16 @@ app.post('/pic', (req, res, next) => {
 	})
 
 	req.on('end', () => {
-		fs.writeFile('./kate.jpg', imageThing)
+		fs.writeFile('./image2.jpg', imageThing)
 	})
 
 })
 
 app.get('/pic', (req, res, next) => {
-	res.sendFile(__dirname + '/kate.jpg');
+	res.sendFile(__dirname + '/image1.jpg');
 })
 
-let port = process.env.PORT || 1337
+let port = process.env.PORT || 1337;
 
 app.listen(port, () => {
 	console.log('rhyming at 1337')

@@ -20,8 +20,8 @@ ambient.on('ready', function () {
           console.log('taking picture');
 
           const request = http.request({
-            hostname: 'https://agile-depths-39391.herokuapp.com/',
-            port: 443,
+            hostname: '172.16.22.196',
+            port: '1337',
             path: '/pic',
             method: 'POST',
             headers: {
@@ -30,8 +30,8 @@ ambient.on('ready', function () {
             }
           })
 
-          request.write(image)
-
+          request.write(image);
+          console.log('hit the request.write: ', image);
         })
       }
       console.log("Light level:", lightdata.toFixed(8));
