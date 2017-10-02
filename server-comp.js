@@ -48,6 +48,8 @@ app.get('/pic', (req, res, next) => {
 	res.sendFile(__dirname + '/kate.jpg');
 })
 
-app.listen(1337, () => {
+let port = process.env.PORT || 1337
+
+app.listen(port, () => {
 	console.log('rhyming at 1337')
 })

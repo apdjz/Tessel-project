@@ -20,8 +20,8 @@ ambient.on('ready', function () {
           console.log('taking picture');
 
           const request = http.request({
-            hostname: '172.16.22.196',
-            port: 1337,
+            hostname: 'https://agile-depths-39391.herokuapp.com/',
+            port: 443,
             path: '/pic',
             method: 'POST',
             headers: {
